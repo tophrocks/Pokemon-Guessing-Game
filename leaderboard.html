@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <div class="leaderboard-container">
+    <h1>Leaderboard</h1>
+    <table id="leaderboardTable">
+      <tr>
+        <th>Player Name</th>
+        <th>Correct Guesses</th>
+      </tr>
+    </table>
+    <button id = "Back-To-Start" onclick="goBack()">Back to Start</button>
+  </div>
+
+  <script>
+    function loadLeaderboard() {
+      const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || {};
+      const table = document.getElementById("leaderboardTable");
+
+      for (const [player, data] of Object.entries(leaderboard)) {
+        const row = table.insertRow();
+        const cellName = row.insertCell(0);
+        const cellGuesses = row.insertCell(1);
+
+        cellName.textContent = player;
+        cellGuesses.textContent = data.correctGuesses;
+      }
+    }
+
+    function goBack() {
+      window.location.href = "index.html";
+    }
+
+    // Load the leaderboard data when the page loads
+    window.onload = loadLeaderboard;
+  </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* GENERAL STYLES */
+body { /* Main Text Style */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Main Container */
+  .container {
+    text-align: center;
+  }
+  
+  /* Image and Timer Container */
+  .image-timer-container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 20px;
+  }
+  
+  /* Pokemon Image Style */
+  #pokemonImage {
+    height: 200px; /* Height of the image */
+    max-width: 100%;
+    margin-right: 150px;
+  }
+  
+  /* Timer Style */
+  #timerContainer {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Result Style */
+  #result {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  /* Input Box Style */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 2px solid #4CAF50; /* Creates a green border */
+    border-radius: 5px; /* Rounds off corners */
+    margin-top: 10px; 
+  }
+  
+  /* Input Box Style (Focused) */
+  input[type="text"]:focus {
+    border-color: #66afe9; /* Change border color when focused */
+    outline: none; /* Removes the outline */
+  }
+
+  /* Welcome text style */
+  .welcome-text {
+    position: absolute; 
+    left: 120px;
+    top: 380px;
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+  }
+
+  /* Name input style */
+  .name-input {
+    position: absolute;
+    left: 235px;          
+    top: 420px;           
+    width: 700px;        
+    padding: 10px;       
+    font-size: 64px;     
+    border: 1px solid #ccc; 
+    border-radius: 5px;  
+    box-sizing: border-box; 
+  }
+
+/* BUTTON STYLES */
+  
+  /* Button container style */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Style aligned button */
+  .aligned-button {
+    width: 50%;               /* Each button takes up 1/4th of the screen width */
+    height: 50%;              /* Each button takes up 1/4th of the screen height */
+    font-size: 32px;
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .aligned-button:hover {
+    background-color: darkgreen;
+  }
+
+  /* Style Back-To-Start Button */
+  #Back-To-Start {
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 30px auto 0;
+  }
+  
+  #Back-To-Start:hover {
+    background-color: darkgreen;
+  }
+
+  /* Style Back-To-Start-Game Button */
+  #Back-To-Start-Game {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  #Back-To-Start-Game:hover {
+    background-color: darkred;
+  }
+  /* Style Guess Button */
+  #guessButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  #guessButton:hover {
+    background-color: darkred;
+  }
+  
+/* LEADERBOARD STYLES */
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #leaderboardTable {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #leaderboardTable th,
+  #leaderboardTable td {
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  #leaderboardTable th {
+    background-color: red;
+    color: white;
+  }
+  
+  #leaderboardTable tr:nth-child(even) { /* This is used to make each row look different colors. */
+    background-color: #f2f2f2;
+  }
+  
+  #leaderboardTable tr:hover {
+    background-color: #ddd;
+  }
+
+/* LOADING STYLES */
+
+  .hide {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
